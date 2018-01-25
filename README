@@ -1,0 +1,3 @@
+Build with the following gcc command:
+
+gcc uuid.c -luuid -lssl -lcrypto -o uuid
