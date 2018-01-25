@@ -1,3 +1,7 @@
 Build with the following gcc command:
 
 gcc uuid.c -luuid -lssl -lcrypto -o uuid
+
+You may need to install some libraries:
+
+apt install uuid-dev libssl-dev
