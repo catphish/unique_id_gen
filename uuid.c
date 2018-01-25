@@ -1,8 +1,8 @@
 #include <openssl/md5.h>
 #include <uuid/uuid.h>
-#include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int main(int argc, char *argv[])
 {
@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
   unsigned char uuid[37];
   MD5(string, string_length, hash);
   uuid_unparse(hash, uuid);
-  uuid[36] = '\n';
-  write(1,uuid,37);
+  printf("SET VARIABLE CALL_UUID %s\n", uuid);
   return(0);
 }
